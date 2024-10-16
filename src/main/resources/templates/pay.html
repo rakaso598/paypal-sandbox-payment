@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Payment</title>
+</head>
+<body>
+<h1>PayPal 결제</h1>
+<form id="paypal-payment-form" action="/api/paypal/pay" method="POST">
+    <label for="total">총 금액:</label>
+    <input type="text" id="total" name="total" value="10.00" required>
+
+    <label for="currency">통화:</label>
+    <select id="currency" name="currency">
+        <option value="USD">USD</option>
+        <option value="KRW">KRW</option>
+        <!-- 다른 통화도 추가 가능 -->
+    </select>
+
+    <button type="submit">Pay with PayPal</button>
+</form>
+
+<script>
+    document.getElementById('paypal-payment-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var total = document.getElementById('total').value;
+        var currency = document.getElementById('currency').value;
+
+        fetch('/api/paypal/pay?total=' + total + '&currency=' + currency, {
+            method: 'POST',
+        })
+        .then(response => response.json())
+        .then(data => {
+            // 서버가 리디렉션 URL을 반환하면 자동으로 PayPal 페이지로 리디렉션
+            if (data.redirect_url) {
+                window.location.href = data.redirect_url;
+            } else {
+                console.error('PayPal 결제 승인 URL을 찾을 수 없습니다.');
+            }
+        })
+        .catch(error => {
+            console.error('결제 요청 중 오류 발생:', error);
+        });
+    });
+</script>
+</body>
+</html>
