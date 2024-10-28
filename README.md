@@ -6,7 +6,7 @@ This project does not guarantee the security of the payment system and should no
 
 
 ## ⚠️ 주의사항
-**이 프로젝트는 PayPal Sandbox 결제 테스트용입니다.**  
+**이 프로젝트는 PayPal Sandbox 결제 테스트 전용입니다.**  
 실제 결제 처리를 하지 마세요! 이 코드는 테스트 및 참고용으로만 제공되며, 실제 사용을 위한 충분한 보안 및 검증 절차가 포함되지 않았습니다.  
 개인적인 정보나 민감한 데이터를 입력하지 마세요.  
 이 프로젝트는 결제 시스템의 보안을 보장하지 않으며, 신뢰할 수 없으므로 실제 결제 환경에서는 사용하지 말아야 합니다.  
