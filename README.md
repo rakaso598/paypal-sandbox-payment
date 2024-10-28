@@ -4,6 +4,7 @@ Do not use it for real payment processing! This code is provided for testing and
 Do not enter personal or sensitive information.  
 This project does not guarantee the security of the payment system and should not be used in a real payment environment as it is not trustworthy.  
 
+***
 
 ## ⚠️ 주의사항 ⚠️  
 **이 프로젝트는 PayPal Sandbox 결제 테스트 전용입니다.**  
