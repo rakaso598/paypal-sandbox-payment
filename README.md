@@ -1,4 +1,4 @@
-## ⚠️ **Disclaimer** ⚠️   
+## ⚠️ **DISCLAIMER** ⚠️   
 **This project is for PayPal Sandbox payment testing purposes only.**  
 Do not use it for real payment processing! This code is provided for testing and reference only and does not include adequate security or validation measures for actual use.  
 Do not enter personal or sensitive information.  
